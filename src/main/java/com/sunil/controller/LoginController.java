@@ -13,18 +13,12 @@ import com.sunil.repository.CustomerRepository;
 @RestController
 public class LoginController {
 	
-	@Autowired
-	private CustomerRepository customerRepository;
-	
-	
+
 	@GetMapping("/login")
 	public String getLogin() {
 		return "login display";
 	}
 	
-	@PostMapping("/register")
-	public Customer registerCustomer(@RequestBody Customer customer) {
-		return customerRepository.save(customer);
-	}
+
 
 }
